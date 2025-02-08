@@ -14,8 +14,10 @@ a {
 }
 
 a:hover {
-    color: #f825b2;
+    mix-blend-mode: exclusion;
 }
+
+
 
 .grid {
     /* This is the border of your grid, commit or omit as needed.
@@ -32,6 +34,7 @@ a:hover {
     grid-template-areas:
         'logo head . . . .'
         'cont cont cont . artcont artcont'
+        '. . . . . .'
         /* This line can have content added to it, until then it will not take up space on the page */
     ;
 }
@@ -47,7 +50,7 @@ a:hover {
     grid-area: head;
     font-size: 1vw;
     font-family: sans-serif;
-    line-height: 1.25rem;
+    line-height: 1.25;
 }
 
 .content {
@@ -58,7 +61,7 @@ a:hover {
     background-repeat: no-repeat;
     background-position: 35% 25%;
     background-size: 95%;
-    line-height: 12rem;
+    line-height: 1.15;
 }
 
 .content > p {
@@ -88,9 +91,14 @@ a:hover {
     padding: 0;
 }
 
-#top2 > img {
+#top2 > a > img {
     width: 2vw;
     height: 2vh;
+    display: inline;
+}
+
+#top2 > a > img:hover {
+    mix-blend-mode: exclusion;
 }
 
 #subcontainer {
@@ -155,10 +163,4 @@ a:hover {
 
 #art10 {
     grid-area: art10;
-}
-
-
-#bottom {
-    grid-area: bot;
-    background-color: red;
 }
