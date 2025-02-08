@@ -39,6 +39,8 @@ a:hover {
     ;
 }
 
+
+
 #logo {
     grid-area: logo;
     height: 3rem;
@@ -64,7 +66,7 @@ a:hover {
     line-height: 1.15;
 }
 
-.content > p {
+.content>p {
     mix-blend-mode: exclusion;
 }
 
@@ -77,8 +79,8 @@ a:hover {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas:
-    'top top2'
-    'bot bot';
+        'top top2'
+        'bot bot';
 }
 
 #top {
@@ -91,13 +93,13 @@ a:hover {
     padding: 0;
 }
 
-#top2 > a > img {
+#top2>a>img {
     width: 2vw;
     height: 2vh;
     display: inline;
 }
 
-#top2 > a > img:hover {
+#top2>a>img:hover {
     mix-blend-mode: exclusion;
 }
 
@@ -109,16 +111,25 @@ a:hover {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: repeat(5, 1fr);
-    grid-template-areas: 
-    'art1 art2'
-    'art3 art4'
-    'art5 art6'
-    'art7 art8'
-    'art9 art10';
+    grid-template-areas:
+        'art1 art2'
+        'art3 art4'
+        'art5 art6'
+        'art7 art8'
+        'art9 art10';
 
 }
 
-#art1,#art2,#art3,#art4,#art5,#art6,#art7,#art8,#art9,#art10 {
+#art1,
+#art2,
+#art3,
+#art4,
+#art5,
+#art6,
+#art7,
+#art8,
+#art9,
+#art10 {
     padding: 1rem;
     border: #32B655;
     border-style: solid;
@@ -163,4 +174,45 @@ a:hover {
 
 #art10 {
     grid-area: art10;
+}
+
+@media (max-width: 768px) and (min-width: 300px) {
+    .grid {
+        padding: 2rem;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas:
+            'logo . head'
+            'cont cont cont'
+            'artcont artcont artcont';
+        gap: 1rem;
+    }
+
+    #articlescontainer {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas:
+            'top top2'
+            'bot bot';
+            font-size: 4vw;
+            border: none;
+            border-style: none;
+            border-width: 0;
+    }
+
+    #top {
+
+    }
+
+    #top2 > a > img {
+        width: 5vw;
+        height: 5vh;
+        margin: 0;
+    }
+
+    .head {
+        font-size: 4vw;
+        text-align: right;
+    }
+
 }

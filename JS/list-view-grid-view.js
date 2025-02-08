@@ -14,10 +14,11 @@ document.addEventListener("DOMContentLoaded", function () {
         e.preventDefault();
         subcontainer.style.display = "block"; // Change to block layout
         subcontainer.style.border = "none";
+        subcontainer.style.marginBottom = "2rem";
         articles.forEach(article => {
             article.style.display = "block";
             article.style.width = "100%";
-            article.style.marginBottom = "1rem";
+            article.style.marginBottom = "0";
         });
 
         // Change icon states
