@@ -186,6 +186,9 @@ a:hover {
             'cont cont cont'
             'artcont artcont artcont';
         gap: 1rem;
+        border: none;
+        border-style: none;
+        border-width: 0;
     }
 
     #articlescontainer {
@@ -201,7 +204,7 @@ a:hover {
     }
 
     #top {
-
+        align-self: end;
     }
 
     #top2 > a > img {
