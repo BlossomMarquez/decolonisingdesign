@@ -1,0 +1,231 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    color: #32B655;
+}
+
+body {
+    background-color: #F0F0F0;
+}
+
+a:active,
+a {
+    color: #32B655;
+}
+
+a:hover {
+    mix-blend-mode: exclusion;
+}
+
+
+
+.grid {
+    /* This is the border of your grid, commit or omit as needed.
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: black;
+    */
+    width: 100vw;
+    height: 100vh;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 5vw repeat(2, 1fr) 15% repeat(2, 1fr);
+    grid-template-rows: 20% 80%;
+    grid-template-areas:
+        'logo head . . . .'
+        'cont . para para para .'
+        '. . . . . .'
+        /* This line can have content added to it, until then it will not take up space on the page */
+    ;
+}
+
+#para {
+    grid-area: para;
+    line-height: 1.25;
+    font-family: sans-serif;
+    font-size: 1vw;
+}
+
+#para > ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#logo {
+    grid-area: logo;
+    height: 3rem;
+}
+
+.head {
+    /* Because the content box is placed on the same line as this the head box will expand to the area that cont takes up.
+    This is the same for anything place alongside content that may be larger than itself.*/
+    grid-area: head;
+    font-size: 1vw;
+    font-family: sans-serif;
+    line-height: 1.25;
+}
+
+.content {
+    grid-area: cont;
+    font-family: sans-serif;
+    font-size: 5vw;
+    background-image: url(./images/original_4203adda485bf51284d4a1ab9a008c9f\ 1.png);
+    background-repeat: no-repeat;
+    background-position: 35% 25%;
+    background-size: 95%;
+    line-height: 1.15;
+}
+
+.content>p {
+    mix-blend-mode: exclusion;
+}
+
+#articlescontainer {
+    grid-area: artcont;
+    padding: 1rem;
+    font-family: sans-serif;
+    font-size: 1vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+        'top top2'
+        'bot bot';
+}
+
+#top {
+    grid-area: top;
+}
+
+#top2 {
+    grid-area: top2;
+    justify-self: right;
+    padding: 0;
+}
+
+#top2>a>img {
+    width: 2vw;
+    height: 2vh;
+    display: inline;
+}
+
+#top2>a>img:hover {
+    mix-blend-mode: exclusion;
+}
+
+#subcontainer {
+    grid-area: bot;
+    border: #32B655;
+    border-style: solid;
+    border-width: .1vw;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+        'art1 art2'
+        'art3 art4'
+        'art5 art6'
+        'art7 art8'
+        'art9 art10';
+
+}
+
+#art1,
+#art2,
+#art3,
+#art4,
+#art5,
+#art6,
+#art7,
+#art8,
+#art9,
+#art10 {
+    padding: 1rem;
+    border: #32B655;
+    border-style: solid;
+    border-width: .1vw;
+}
+
+#art1 {
+    grid-area: art1;
+}
+
+#art2 {
+    grid-area: art2;
+}
+
+#art3 {
+    grid-area: art3;
+}
+
+#art4 {
+    grid-area: art4;
+}
+
+#art5 {
+    grid-area: art5;
+}
+
+#art6 {
+    grid-area: art6;
+}
+
+#art7 {
+    grid-area: art7;
+}
+
+#art8 {
+    grid-area: art8;
+}
+
+#art9 {
+    grid-area: art9;
+}
+
+#art10 {
+    grid-area: art10;
+}
+
+@media (max-width: 768px) and (min-width: 300px) {
+    .grid {
+        padding: 2rem;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas:
+            'logo . head'
+            'cont cont cont'
+            'artcont artcont artcont';
+        gap: 1rem;
+        border: none;
+        border-style: none;
+        border-width: 0;
+    }
+
+    #articlescontainer {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas:
+            'top top2'
+            'bot bot';
+            font-size: 4vw;
+            border: none;
+            border-style: none;
+            border-width: 0;
+    }
+
+    #top {
+        align-self: end;
+    }
+
+    #top2 > a > img {
+        width: 5vw;
+        height: 5vh;
+        margin: 0;
+    }
+
+    .head {
+        font-size: 4vw;
+        text-align: right;
+    }
+
+}
