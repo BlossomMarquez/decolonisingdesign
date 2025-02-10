@@ -30,11 +30,11 @@ a:hover {
     padding: 2rem;
     display: grid;
     grid-template-columns: 5vw repeat(2, 1fr) 15% repeat(2, 1fr);
-    grid-template-rows: 20% 80%;
+    grid-template-rows: 20% auto;
     grid-template-areas:
         'logo head . . . .'
         'cont . para para para .'
-        '. . . . . .'
+        'foot foot foot foot foot foot'
         /* This line can have content added to it, until then it will not take up space on the page */
     ;
 }
@@ -49,6 +49,34 @@ a:hover {
 #para > ul {
     list-style-type: none;
     padding-left: 0;
+}
+
+.paragraph {
+    margin-bottom: 2vh;
+}
+
+#footer {
+    grid-area: foot;
+    margin-top: 5vh;
+    padding: 2vw;
+    font-family: sans-serif;
+    border-top: #32B655 solid .25vh;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas: 
+    'link credit';
+}
+
+#footer > a {
+    text-decoration: none;
+}
+
+#link {
+    grid-area: link;
+}
+
+#credit {
+    grid-area: credit;
 }
 
 #logo {
