@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     fetch('notes.json')
         .then(response => response.json())
         .then(data => {
@@ -10,8 +10,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (infoDiv) {
                     const notesList = document.createElement('ol');
                     notesList.classList.add('notes-list');
-                
-                 
 
                     if (Array.isArray(noteItem.notes)) {
                         noteItem.notes.forEach((note, idx) => {
@@ -24,15 +22,13 @@ document.addEventListener("DOMContentLoaded", function() {
                         listItem.textContent = noteItem.notes; //For non-array list
                         notesList.appendChild(listItem);
                     }
-                 }
-                    //Populates divs with data
-                    infoDiv.innerHTML = `
-                 <h3>${noteItem.comment}</h3>
-                `;
+                
+                //Populates divs with data
                 infoDiv.appendChild(notesList);
-                }
-            });
-        })
-        .catch(error => {
-            console.error('Error fetching notes', error);
+            }
         });
+})
+    .catch(error => {
+        console.error('Error fetching notes', error);
+    });
+});

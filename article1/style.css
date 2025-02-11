@@ -48,6 +48,10 @@ ul,ol > a {
     text-decoration: underline;
 }
 
+.notes-list {
+    list-style: none;
+}
+
 #para {
     grid-area: para;
     line-height: 1.75;
