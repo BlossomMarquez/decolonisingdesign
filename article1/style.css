@@ -33,11 +33,19 @@ a:hover {
     grid-template-columns: 5vw repeat(2, 1fr) 15% repeat(2, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
-        'logo head . . . .'
-        'cont . para para para .'
+        'logo head cont cont cont .'
+        '. . para para para .'
         'foot foot foot foot foot foot'
         /* This line can have content added to it, until then it will not take up space on the page */
     ;
+}
+
+ul,ol {
+    text-decoration: none;
+}
+
+ul,ol > a {
+    text-decoration: underline;
 }
 
 #para {

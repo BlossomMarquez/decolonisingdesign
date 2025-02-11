@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
             article.style.display = "block";
             article.style.width = "100%";
             article.style.marginBottom = "0";
-            article.style.borderBottom = "0.1vw solid #32B655";
+            article.style.borderBottom = "0.25vw solid #32B655";
         });
 
         // Change icon states
@@ -33,14 +33,13 @@ document.addEventListener("DOMContentLoaded", function () {
         subcontainer.style.display = "grid"; // Change back to grid layout
         subcontainer.style.gridTemplateColumns = "50% 50%";
         subcontainer.style.gridTemplateRows = "repeat(5, auto)";
-        subcontainer.style.border = "0.1vw solid #32B655";
         subcontainer.style.gap = "0"; // Removes gap between grid items
         subcontainer.style.overflowY = "auto";
         articles.forEach(article => {
             article.style.display = "block";
             article.style.width = "auto";
             article.style.marginBottom = "0";
-            article.style.border = "0.1vw solid #32B655";
+            article.style.border = "0.25vw solid #32B655";
         });
 
         // Change icon states

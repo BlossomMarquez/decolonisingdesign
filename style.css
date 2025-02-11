@@ -127,7 +127,7 @@ a:hover {
 #subcontainer {
     grid-area: bot;
     line-height: 1.25;
-    border: 0.1vw solid #32B655;
+    border: 0.25vw solid #32B655;
     overflow-y: auto;
     display: grid;
     grid-template-columns: 50% 50%;
