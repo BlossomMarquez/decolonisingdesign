@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     color: #32B655;
+    text-decoration: none;
 }
 
 body {
@@ -34,12 +35,31 @@ a:hover {
     grid-template-areas:
         'logo head . . . .'
         'cont cont cont . artcont artcont'
-        '. . . . . .'
+        'foot foot foot foot foot foot'
         /* This line can have content added to it, until then it will not take up space on the page */
     ;
 }
 
+#footer {
+    grid-area: foot;
+    margin-top: 5vh;
+    padding: 2vw 0 2vw 0;
+    font-family: sans-serif;
+    border-top: #32B655 solid .25vh;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas: 
+    'link credit';
+}
 
+#link {
+    grid-area: link;
+}
+
+#credit {
+    grid-area: credit;
+    justify-self: right;
+}
 
 #logo {
     grid-area: logo;
@@ -76,8 +96,8 @@ a:hover {
     font-family: sans-serif;
     font-size: 1vw;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
     grid-template-areas:
         'top top2'
         'bot bot';
@@ -108,9 +128,10 @@ a:hover {
     border: #32B655;
     border-style: solid;
     border-width: .1vw;
+    line-height: 1.25;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(5, auto);
     grid-template-areas:
         'art1 art2'
         'art3 art4'
@@ -131,7 +152,7 @@ a:hover {
 #art9,
 #art10 {
     padding: 1rem;
-    border: #32B655;
+    border-bottom: #32B655;
     border-style: solid;
     border-width: .1vw;
 }
@@ -184,7 +205,8 @@ a:hover {
         grid-template-areas:
             'logo . head'
             'cont cont cont'
-            'artcont artcont artcont';
+            'artcont artcont artcont'
+            'foot foot foot';
         gap: 1rem;
         border: none;
         border-style: none;
@@ -201,6 +223,23 @@ a:hover {
             border: none;
             border-style: none;
             border-width: 0;
+    }
+
+    #footer {
+        grid-area: foot;
+        margin-top: 5vh;
+        padding: 2vw 0 2vw 0;
+        font-family: sans-serif;
+        border-top: #32B655 solid .25vh;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-areas: 
+        'link credit';
+    }
+
+    #credit {
+        justify-items: left;
+        padding-left: 10vw;
     }
 
     #top {

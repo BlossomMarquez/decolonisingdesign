@@ -12,13 +12,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     listViewBtn.addEventListener("click", function (e) {
         e.preventDefault();
-        subcontainer.style.display = "block"; // Change to block layout
+        subcontainer.style.display = "block";// Change to block layout
+        // subcontainer.style.gridTemplateRows = "auto";
+        // subcontainer.style.gridTemplateColumns = "1fr"
         subcontainer.style.border = "none";
         subcontainer.style.marginBottom = "2rem";
+        subcontainer.style.overflowY = "auto";  
         articles.forEach(article => {
             article.style.display = "block";
             article.style.width = "100%";
             article.style.marginBottom = "0";
+            article.style.border = "none";
         });
 
         // Change icon states
@@ -30,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
         e.preventDefault();
         subcontainer.style.display = "grid"; // Change back to grid layout
         subcontainer.style.gridTemplateColumns = "50% 50%";
-        subcontainer.style.gridTemplateRows = "repeat(5, 1fr)";
+        subcontainer.style.gridTemplateRows = "repeat(5, auto)";
         subcontainer.style.border = "0.1vw solid #32B655";
         subcontainer.style.gap = "0"; // Removes gap between grid items
         articles.forEach(article => {

@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     color: #32B655;
+    text-decoration: none;
 }
 
 body {
@@ -58,7 +59,7 @@ a:hover {
 #footer {
     grid-area: foot;
     margin-top: 5vh;
-    padding: 2vw;
+    padding: 2vw 0 2vw 0;
     font-family: sans-serif;
     border-top: #32B655 solid .25vh;
     display: grid;
@@ -67,16 +68,13 @@ a:hover {
     'link credit';
 }
 
-#footer > a {
-    text-decoration: none;
-}
-
 #link {
     grid-area: link;
 }
 
 #credit {
     grid-area: credit;
+    justify-self: right;
 }
 
 #logo {
