@@ -23,6 +23,10 @@ document.addEventListener("DOMContentLoaded", function () {
                         notesList.appendChild(listItem);
                     }
                 
+                    infoDiv.innerHTML = `
+                    <p>${notesData.numbers.notesList}</p>
+                    `
+
                 //Populates divs with data
                 infoDiv.appendChild(notesList);
             }
