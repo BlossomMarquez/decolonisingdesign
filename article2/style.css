@@ -40,6 +40,12 @@ a:hover {
     ;
 }
 
+#img2grad {
+    background: linear-gradient(#32B655, #F0F0F0);
+    position: absolute;
+    mix-blend-mode: color;
+}
+
 ul,ol {
     text-decoration: none;
 }
