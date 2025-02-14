@@ -2,33 +2,33 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch('notes.json')
         .then(response => response.json())
         .then(data => {
-            const notesData = data.note; //Constructs JSON shorthands into "X" i.e. data.bas becomes bands
+            const notesData = data.note;
 
 
-            notesData.forEach((noteItem, index) => {
+            notesData.forEach((noteItem) => {
                 const infoDiv = document.querySelector('.infoDiv');
                 if (infoDiv) {
                     const notesList = document.createElement('ol');
                     notesList.classList.add('notes-list');
 
-                    if (Array.isArray(noteItem.notes)) {
-                        noteItem.notes.forEach((note, idx) => {
-                            const listItem = document.createElement('li');
-                            listItem.textContent = note;
-                            notesList.appendChild(listItem);
-                        });
-                    } else {
+                    const notes = Array.isArray(noteItem.notes) ? noteItem.notes : [noteItem.notes];
+                    const numbers = Array.isArray(noteItem.numbers) ? noteItem.numbers : [noteItem.numbers];
+                    const names = Array.isArray(noteItem.names) ? noteItem.names : [noteItem.names];
+
+                    const maxLength = Math.max(notes.length, numbers.length, names.length);
+
+                    for (let i = 0; i < maxLength; i++) {
                         const listItem = document.createElement('li');
-                        listItem.textContent = noteItem.notes; //For non-array list
+
+                        const note = notes[i] !== undefined ? notes[i] : 'N/A';
+                        const number = numbers[i] !== undefined ? numbers[i] : 'N/A';
+                        const name = names[i] !== undefined ? names[i] : 'N/A';
+
+                        listItem.innerHTML = `<a name="${name}"></a> ${number} ${note}`;
                         notesList.appendChild(listItem);
                     }
-                
-                //Populates divs with data
-                infoDiv.appendChild(notesList);
-            }
+                    infoDiv.appendChild(notesList);
+                }
+            })
         });
-})
-    .catch(error => {
-        console.error('Error fetching notes', error);
-    });
 });

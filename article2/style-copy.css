@@ -161,6 +161,10 @@ ul,ol > a {
         border-width: 0;
     }
 
+    figcaption {
+        font-size: 3.5vw;
+    }
+
     ol {
         font-size: 4vw;
     }

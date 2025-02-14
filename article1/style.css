@@ -40,6 +40,27 @@ a:hover {
     ;
 }
 
+.canvas {
+    background-color: #32B655;
+    position: absolute;
+    mix-blend-mode:darken;
+}
+
+:root{ --threshold:50%; }
+
+
+.img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+   /* filter: brightness(calc(100% + var(--threshold))) grayscale(100%) contrast(1000%); */
+}
+
+figcaption {
+    font-size: 1.25vw;
+    padding-bottom: 5vh;
+}
+
 ul,ol {
     text-decoration: none;
 }
@@ -138,6 +159,10 @@ ul,ol > a {
         border: none;
         border-style: none;
         border-width: 0;
+    }
+
+    figcaption {
+        font-size: 3.5vw;
     }
 
     ol {
