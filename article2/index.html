@@ -8,6 +8,9 @@
     <title>(De)Colonising Design</title>
     <!--Make sure to change stylesheet link-->
     <link rel="stylesheet" href="style.css">
+    <script src="./list-item.js"></script>
+    <script src="./canvas-resize.js"></script>
+    <script src="./footnotes-list.js"></script>
 </head>
 
 <body>
@@ -34,13 +37,19 @@
         </div>
 
         <div id="para">
-            <p class="paragraph"><b>Words by <a href="" target="_blank">Chris Lee</a></b></p>
-            <p class="paragraph">Sept. 26, 2016</p><br>
+            <p class="paragraph"><b>Words by: <a href="https://cairolexicon.com/" target="_blank">Chris Lee</b></a></p>
+            <p class="paragraph">Sept. 26, 2016</p>
+
+            <canvas class="canvas"></canvas>
+            <figure>
+                <img id="img3" class="img" src="./Images/1_Wong-SF-Playgrounds-690.jpg">
+                <figcaption></figcaption>
+            </figure>
 
             <p class="paragraph">
-                <img id="img1" src="./Images/1_Wong-SF-Playgrounds-690.jpg">
+
                 In 2014, a widely shared youtube video recorded a dispute between tech bros in San Francisco’s Mission
-                District and local youth over the use of a public soccer field.[1] The tech bros insisted on their
+                District and local youth over the use of a public soccer field.<a href="#1">[1]</a> The tech bros insisted on their
                 entitlement to use the field exclusively for 1-hour by presenting a San Francisco Recreation and Parks
                 Department permit that for the cost $27 would reinforce their claim. The permit’s legitimacy was
                 contested by the youth who countered that in the local custom, the field had never been “booked,” and
@@ -58,10 +67,10 @@
                 possibilities of subversion.
             </p>
             <p class="paragraph">
-                The independent journal of landscape architecture and political economy, Scapegoat, [2] opens its first
+                The independent journal of landscape architecture and political economy, Scapegoat, <a href="#2">[2]</a> opens its first
                 issue with the assertion that private property is to be understood as the “literal foundation” of
                 architecture and landscape architecture practice, where each project begins with a site that is “already
-                drawn.” [3] This paper attempts to outline a similarly fundamental insight with regards to graphic
+                drawn.” <a href="#3" name="3link"> [3]</a> This paper attempts to outline a similarly fundamental insight with regards to graphic
                 design. It focuses on typography, mapping, and the writing of legislation—each representing what Bruno
                 Latour might consider “deflated” forms, or what Lisa Gitelman might regard as “genres” of graphic
                 design—as primary constituents of an entanglement between graphic design and state power. In other
@@ -106,10 +115,14 @@
                 that doing so will help build a discursive ground which puts into relief graphic design’s coloniality,
                 while scrutinizing its recesses to address problems of colonial legitimacy.
             </p>
-            <br><p class="paragraph"><b>Typography and Myth</b></p>
+            <br>
+            <p class="paragraph"><b>Typography and Myth</b></p>
+            <canvas class="canvas"></canvas>
+            <figure>
+                <img id="img3" class="img" src="./Images/2_Cree_Syllabics_James_Evans.jpg">
+                <figcaption></figcaption>
+            </figure>
             <p class="paragraph">
-                <canvas id="img2grad" class="canvas"></canvas>
-                <img id="img2" class="img" src="./Images/2_Cree_Syllabics_James_Evans.jpg">
                 I begin with the contention that the Cree syllabary was ostensibly the first typeface
                 to ever be designed within the settler-state now known as Canada.[9] However, I am less interested in
                 the merit that it was the first, and rather seek to address the notion that it was designed. Benedict
@@ -190,7 +203,13 @@
                 evidence and empiricism—or what Walter Mignolo might call a form of “epistemic disobedience”—is a
                 politically valid deflection of a persistent settler-normativity.
             </p>
-            <br><p class="paragraph"><b>Legibility and Landscape</b></p>
+            <br>
+            <p class="paragraph"><b>Legibility and Landscape</b></p>
+            <canvas class="canvas"></canvas>
+            <figure>
+                <img id="img3" class="img" src="./Images/3_Scientific-Forest.jpg">
+                <figcaption></figcaption>
+            </figure>
             <p class="paragraph">
                 The premise of the section that follows is that the notion of legibility—as a concern both in graphic
                 design and statecraft—brings into the spectrum of concerns, agendas and forms that are not typically
@@ -232,7 +251,13 @@
                 recognizing Indigenous “land rights” claims mean little more than the right to buy and sell land in a
                 market regulated by the state.
             </p>
-            <br><p class="paragraph"><b>Standards and the Already Written</b></p>
+            <br>
+            <p class="paragraph"><b>Standards and the Already Written</b></p>
+            <canvas class="canvas"></canvas>
+            <figure>
+                <img id="img3" class="img" src="./Images/4_le-metre.jpg">
+                <figcaption></figcaption>
+            </figure>
             <p class="paragraph">
                 In seeking the source of this colonial ontology of land-as-property and the coordinates by which it can
                 be regulated, we can go again to James C. Scott who reminds us that one of the aims of the French
@@ -256,6 +281,16 @@
                 Here the politics of standards and measurement are at play. For Scott, “every act of measurement was an
                 act marked by the play of power relations.” [19]
             </p>
+            <canvas class="canvas"></canvas>
+            <figure>
+                <img id="img3" class="img" src="./Images/5_Poids-et-Mesures.jpg">
+                <figcaption>Proposed renovation of the Bastille Prison as a monument to the metric system.</figcaption>
+            </figure>
+            <canvas class="canvas"></canvas>
+            <figure>
+                <img id="img3" class="img" src="./Images/6_Poids_et_mesures.png">
+                <figcaption>Instructional graphic for usage of the new metric standards.</figcaption>
+            </figure>
             <p class="paragraph">
                 In the early years of the new Republic, a proposal was made by “revolutionary architects”[20] for a
                 monument to be built on the site of the former Bastille prison that would commemorate (and be immutably
@@ -294,6 +329,11 @@
                 illegal (illegible) an ontology of land not as discrete object but as a medium through which reciprocal
                 economic relationships are facilitated.
             </p>
+            <canvas class="canvas"></canvas>
+            <figure>
+                <img id="img3" class="img" src="./Images/8_OKA.jpg">
+                <figcaption></figcaption>
+            </figure>
             <p class="paragraph">
                 What was fought for in Europe as the basis of a value system, a set of standards (the “already drawn”)
                 upon which the laws of a democratic republic could be built, would be violently imposed on Turtle Island
@@ -314,12 +354,28 @@
                 scope of the discipline, how much it needs to shift its concerns and modes of practice to consider this
                 possibility, is a question for much further inquiry.
             </p>
+
+            <p class="paragraph">
+              <b>About the Author</b>
+            </p>
+            <p class="paragraph">
+                <a href="https://cairolexicon.com/" target="_blank"><b>Chris Lee</b></a>  is a graphic designer and educator based Buﬀalo, NY. He is a graduate of OCADU (Toronto) and
+                the Sandberg Instituut (Amsterdam), and has worked for The Walrus Magazine, Metahaven and Bruce Mau
+                Design. Through his research practice, Lee explores graphic design’s entanglement with power, standards
+                and legitimacy. He has contributed projects and writing to the Journal of Aesthetics & Protest, The
+                Copyist, Graphic, Volume, and Counter Signals and has facilitated workshops in art institutions in the
+                US, Scotland, the Netherlands and Croatia. Currently, Chris is an Assistant Professor at the University
+                at Buffalo SUNY, a member of the programming committee of Gendai Gallery, a design research fellow at
+                Het Nieuwe Instituut in Rotterdam (2017/18) and formerly with the editorial board of the journal
+                Scapegoat: Architecture/Landscape/Political Economy.
+            </p>
             <p class="paragraph">
                 Notes
 
             <div class="infoDiv">
-
             </div>
+
+            <div class="footnotes"></div>
             </p>
         </div>
 
@@ -332,7 +388,5 @@
     </div>
     <!--This is the end of the grid div-->
 </body>
-<script src="./article2/list-item.js"></script>
-<script src="./article2/canvas-resize.js"></script>
 
 </html>
