@@ -40,31 +40,43 @@ a:hover {
     ;
 }
 
-::root {
-    --threshold: 50%;
+.para {
+    width: 100%;
+    height: auto;
+    transition: all ease-in-out 350ms;
 }
 
 .img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    filter: brightness(calc(100% + var(--threshold))) grayscale(100%) contrast(1000%);
-    background-color: #32B655;
-    mix-blend-mode: multiply;
+width: 100%;
+height: auto;
 }
 
-:root{ --threshold:50%; }
+:root {
+    --threshold: 50%;
+}
+
+div>.para:hover {
+    filter: brightness(calc(100% + var(--threshold))) grayscale(100%) contrast(1000%);
+    mix-blend-mode: exclusion;
+}
+
+div>.para:hover .img{
+    width: 100%;
+    height: auto;
+}
 
 figcaption {
     font-size: 1.25vw;
     padding-bottom: 5vh;
 }
 
-ul,ol {
+ul,
+ol {
     text-decoration: none;
 }
 
-ul,ol > a {
+ul,
+ol>a {
     text-decoration: underline;
 }
 
@@ -72,14 +84,14 @@ ul,ol > a {
     list-style: none;
 }
 
-#para {
+.para {
     grid-area: para;
     line-height: 1.75;
     font-family: sans-serif;
     font-size: 1.5vw;
 }
 
-#para>ul {
+.para>ul {
     list-style-type: none;
     padding-left: 0;
 }
@@ -167,7 +179,7 @@ ul,ol > a {
     ol {
         font-size: 4vw;
     }
-     
+
     .content {
         padding: 5vh 0 1vh 0;
         grid-area: cont;

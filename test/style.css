@@ -1,0 +1,23 @@
+
+img {
+transition: all linear 350ms;
+display: block;
+width: 250px;
+height: auto;
+mix-blend-mode: multiply;
+}
+div {
+float: left;
+background: #c1ab95;
+width: 250px;
+height: auto;
+}
+
+:root {
+    --threshold: 50%;
+}
+
+div:hover img {
+    filter: brightness(calc(100% + var(--threshold))) grayscale(100%) contrast(1000%);
+opacity: 0.99;
+}
