@@ -57,7 +57,6 @@ height: auto;
 
 div>.para:hover {
     filter: brightness(calc(100% + var(--threshold))) grayscale(100%) contrast(1000%);
-    mix-blend-mode: exclusion;
 }
 
 div>.para:hover .img{
