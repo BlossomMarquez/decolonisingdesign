@@ -1,0 +1,215 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    color: #32B655;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+a:active,
+a {
+    color: #32B655;
+}
+
+a:hover {
+    mix-blend-mode: exclusion;
+}
+
+
+
+.grid {
+    /* This is the border of your grid, commit or omit as needed.
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: black;
+    */
+    width: 100vw;
+    height: 100vh;
+    padding: 2rem;
+    display: grid;
+    gap: 2.5vh;
+    grid-template-columns: 5vw repeat(2, 1fr) 15% repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        'logo head cont cont cont .'
+        '. . para para para .'
+        'foot foot foot foot foot foot'
+        /* This line can have content added to it, until then it will not take up space on the page */
+    ;
+}
+
+.canvas {
+    background-color: #32B655;
+    position: absolute;
+    mix-blend-mode:darken;
+}
+
+:root{ --threshold:50%; }
+
+
+.img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+   /* filter: brightness(calc(100% + var(--threshold))) grayscale(100%) contrast(1000%); */
+}
+
+figcaption {
+    font-size: 1.25vw;
+    padding-bottom: 5vh;
+}
+
+ul,ol {
+    text-decoration: none;
+}
+
+ul,ol > a {
+    text-decoration: underline;
+}
+
+.notes-list {
+    list-style: none;
+}
+
+#para {
+    grid-area: para;
+    line-height: 1.75;
+    font-family: sans-serif;
+    font-size: 1.5vw;
+}
+
+#para>ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.paragraph {
+    margin-bottom: 2vh;
+}
+
+#contributors {
+    border-top: #32B655 solid .25vh;
+    padding-top: 2vh;
+}
+
+#footer {
+    grid-area: foot;
+    padding: 2vw 0 2vw 0;
+    font-family: sans-serif;
+    font-size: 1.5vw;
+    border-top: #32B655 solid .25vh;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas:
+        'link credit';
+}
+
+#link {
+    grid-area: link;
+}
+
+#credit {
+    grid-area: credit;
+    justify-self: right;
+}
+
+#logo {
+    grid-area: logo;
+    height: 3rem;
+}
+
+.head {
+    /* Because the content box is placed on the same line as this the head box will expand to the area that cont takes up.
+    This is the same for anything place alongside content that may be larger than itself.*/
+    grid-area: head;
+    font-size: 1.5vw;
+    font-family: sans-serif;
+    line-height: 1.25;
+}
+
+.content {
+    grid-area: cont;
+    font-family: sans-serif;
+    font-size: 5vw;
+    background-image: url(./images/original_4203adda485bf51284d4a1ab9a008c9f\ 1.png);
+    background-repeat: no-repeat;
+    background-position: 35% 25%;
+    background-size: 95%;
+    line-height: 1.15;
+}
+
+.content>p {
+    mix-blend-mode: exclusion;
+}
+
+@media (max-width: 768px) and (min-width: 300px) {
+    .grid {
+        padding: 2rem;
+        font-size: 4vw;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas:
+            'logo  head'
+            'cont . '
+            'para para'
+            'foot foot';
+        gap: 0;
+        border: none;
+        border-style: none;
+        border-width: 0;
+    }
+
+    ol {
+        font-size: 4vw;
+    }
+     
+    .content {
+        padding: 5vh 0 1vh 0;
+        grid-area: cont;
+    }
+
+    .paragraph {
+        font-size: 4vw;
+        grid-area: para;
+    }
+
+    #contributors {
+        font-size: 4vw;
+    }
+
+    #footer {
+        grid-area: foot;
+        margin-top: 2.5vh;
+        padding: 2vw 0 2vw 0;
+        font-size: 4vw;
+        font-family: sans-serif;
+        border-top: #32B655 solid .25vh;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-areas:
+            'link credit';
+    }
+
+    #credit {
+        justify-items: left;
+        padding-left: 10vw;
+    }
+
+    #top {
+        align-self: end;
+    }
+
+    #top2>a>img {
+        width: 5vw;
+        height: 5vh;
+        margin: 0;
+    }
+
+    .head {
+        font-size: 4vw;
+        text-align: right;
+    }
+
+}
