@@ -14,12 +14,13 @@ document.addEventListener("DOMContentLoaded", function () {
         e.preventDefault();
         subcontainer.style.display = "block";// Change to block layout
         subcontainer.style.border = "none"
-        subcontainer.style.marginBottom = "2rem";
-        subcontainer.style.overflowY = "auto";  
+        subcontainer.style.marginBottom = ".5vh";
+        subcontainer.style.overflowY = "visible";
+        subcontainer.style.gridArea = "bot";
         articles.forEach(article => {
             article.style.display = "block";
             article.style.width = "100%";
-            article.style.marginBottom = "0";
+            article.style.marginBottom = ".5vh";
             article.style.borderBottom = "0.25vw solid #32B655";
         });
 
@@ -33,8 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
         subcontainer.style.display = "grid"; // Change back to grid layout
         subcontainer.style.gridTemplateColumns = "50% 50%";
         subcontainer.style.gridTemplateRows = "repeat(5, auto)";
-        subcontainer.style.gap = "0"; // Removes gap between grid items
-        subcontainer.style.overflowY = "auto";
+        subcontainer.style.gap = ".5vh";
+        subcontainer.style.overflowY = "visible";
+        subcontainer.style.gridArea = "bot";
         articles.forEach(article => {
             article.style.display = "block";
             article.style.width = "auto";

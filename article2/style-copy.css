@@ -52,16 +52,17 @@ height: auto;
 }
 
 :root {
-    --threshold: 50%;
+    --threshold: 25%;
 }
 
-div>.para:hover {
-    filter: brightness(calc(100% + var(--threshold))) grayscale(100%) contrast(1000%);
+div {
+    transition: all ease-out .5s;
 }
 
-div>.para:hover .img{
-    width: 100%;
-    height: auto;
+div>.img:hover {
+    filter: brightness(calc(100% + var(--threshold))) grayscale(100%) contrast(10000%);
+mix-blend-mode: multiply;
+border-radius: 2vw;
 }
 
 figcaption {

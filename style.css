@@ -1,7 +1,6 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    color: #32B655;
 }
 
 body {
@@ -29,6 +28,7 @@ a:hover {
     height: 100vh;
     padding: 2vh 2vw 0vh 2vw;
     font-size: 1.5vw;
+    color:#32B655;
     display: grid;
     gap: 2.5vh;
     grid-template-columns: 5vw repeat(2, 1fr) 15% repeat(2, 1fr);
@@ -36,7 +36,7 @@ a:hover {
     grid-template-areas:
         'logo head . . . .'
         'cont cont cont . artcont artcont'
-        '. . . . . .'
+        '. . . . artcont artcont'
         'foot foot foot foot foot foot'
         /* This line can have content added to it, until then it will not take up space on the page */
     ;
@@ -85,6 +85,8 @@ a:hover {
     background-position: 35% 25%;
     background-size: 95%;
     line-height: 1.15;
+    color: #32B655;
+    transition: all ease-out .5s;
 }
 
 .content>p {
@@ -98,7 +100,6 @@ a:hover {
     font-size: 1vw;
     display: grid;
     grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(2, auto);
     grid-template-areas:
         'top top2'
         'bot bot';
@@ -127,8 +128,6 @@ a:hover {
 #subcontainer {
     grid-area: bot;
     line-height: 1.25;
-    border: 0.25vw solid #32B655;
-    overflow-y: auto;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: repeat(5, auto);
@@ -138,6 +137,7 @@ a:hover {
         'art5 art6'
         'art7 art8'
         'art9 art10';
+        gap: .5vh;
 
 }
 
@@ -152,7 +152,37 @@ a:hover {
 #art9,
 #art10 {
     padding: 1vw;
-    border: #32B655 solid .25vh;
+    border: #32B655 solid .25vw;
+    border-radius: 2vw;
+    transition: all ease-out .5s;
+}
+
+#art1:hover,
+#art2:hover,
+#art3:hover,
+#art4:hover,
+#art5:hover,
+#art6:hover,
+#art7:hover,
+#art8:hover,
+#art9:hover,
+#art10:hover {
+background-color: #32B655;
+color: #f0f0f0;
+}
+
+#art1:hover>a,
+#art2:hover>a,
+#art3:hover>a,
+#art4:hover>a,
+#art5:hover>a,
+#art6:hover>a,
+#art7:hover>a,
+#art8:hover>a,
+#art9:hover>a,
+#art10:hover>a {
+color: #f0f0f0;
+mix-blend-mode: normal;
 }
 
 #art1 {
