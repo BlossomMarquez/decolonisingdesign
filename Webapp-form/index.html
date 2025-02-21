@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Make sure to change page title-->
+    <title>(De)Colonising Design</title>
+    <!--Make sure to change stylesheet link-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--Build your website inside this grid-->
+    <div class="grid">
+        <div id="logo"><img src="../images/DCD.svg"></div>
+        <div class="head">
+            <p><a href="https://www.decolonisingdesign.com/" target="_blank">(De)Colonising Design</a></p>
+            <br>
+            <p>
+                <a href="." target="_self">Home</a>
+            </p>
+            <a href="./editorial-statement/index.html" target="_self">Editorial Statement</a>
+            <br>
+            <a href="./disclaimer/index.html" target="_self">Disclaimer</a>
+            <br>
+            <a href="./resources/index.html" target="_self">Resources</a>
+        </div>
+
+        <div class="content">
+            <p>(De)</p>
+            <p>Colonising</p>
+            <p>Design</p>
+        </div>
+
+        <div id="articlescontainer">
+            <p class="paragraph" id="top">Footnote Submission Form</p>
+            <form id="my-form" method="POST"
+                action="https://script.google.com/macros/s/AKfycbwury9c8PzacG7DK9Nidq-I7WHbJ8EDYR1c1X6gxnEBQeyLs2eHxb1UQh2LuSX3QC7mKg/exec">
+                <label for="Numbers">Enter Number of Citation (Must be formatted as [x]):</label> <input id="input1" name="Numbers"
+                    type="text" placeholder="Numbers" required>
+                <label for="Names">Enter Name of Link (Must be formatted as plain number e.g. 1,2,3,4)</label> <input id="input2"
+                    name="Names" type="text" placeholder="Names" required>
+                <label for="Links">Enter the in-page link number (Must be formatted as #xlink)</label> <input id="input3"
+                    name="Links" type="text" placeholder="Links" required>
+                <label for="Notes">This is where you put the actual footnote.</label> <input id="input4" name="Notes" type="text"
+                    placeholder="Notes" required>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+
+        <div id="footer">
+            <a id="link" href=".." target="_self">Decolonising Design</a>
+            <p id="credit"> Site designed and developed by <a href="https://www.studioapriori.xyz"
+                    target="_self">Blossom
+                    Marquez</a></p>
+        </div>
+    </div>
+    <!--This is the end of the grid div-->
+</body>
+<script src="redirect.js"></script>
+
+</html>
