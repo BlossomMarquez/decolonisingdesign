@@ -32,11 +32,10 @@ a:hover {
     display: grid;
     gap: 2.5vh;
     grid-template-columns: 5vw repeat(2, 1fr) 15% repeat(2, 1fr);
-    grid-template-rows: auto 75%;
+    grid-template-rows: 25% 60% 15%;
     grid-template-areas:
         'logo head . . . .'
-        'cont cont cont . artcont artcont'
-        '. . . . artcont artcont'
+        'artcont artcont . . . .'
         'foot foot foot foot foot foot'
         /* This line can have content added to it, until then it will not take up space on the page */
     ;
@@ -74,19 +73,6 @@ a:hover {
     font-size: 1.5vw;
     font-family: sans-serif;
     line-height: 1.25;
-}
-
-.content {
-    grid-area: cont;
-    font-family: sans-serif;
-    font-size: 10vw;
-    background-image: url(./images/original_4203adda485bf51284d4a1ab9a008c9f\ 1.png);
-    background-repeat: no-repeat;
-    background-position: 35% 25%;
-    background-size: 95%;
-    line-height: 1.15;
-    color: #32B655;
-    transition: all ease-out .5s;
 }
 
 .content>p {
